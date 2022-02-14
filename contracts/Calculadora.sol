@@ -11,12 +11,12 @@ contract Calculadora{
     modifier mediantePagamento{
 	    address payable payee = msg.sender;
 
-        require(msg.value>=1 ether, "O valor transferido deve ser de pelo menos 1 ether");
+        require(msg.value>=100 szabo, "O valor transferido deve ser de pelo menos 1 ether");
 
-        bool sent = owner.send(1 ether);
+        bool sent = owner.send(100 szabo);
         require(sent, "Failed to send Ether to the owner");
 
-        sent = payee.send(msg.value-1 ether);
+        sent = payee.send(msg.value-100 szabo);
         require(sent, "Failed to send Ether to the payee");
 
 	    _; //placeholder

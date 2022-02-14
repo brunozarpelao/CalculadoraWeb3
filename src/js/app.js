@@ -76,16 +76,16 @@ App = {
     App.contracts.Calculadora.deployed().then(function(instance) {
       switch (operacaoId) {
         case 'somar':
-          instance.somar(valor1, valor2, { from: App.account, value: 1000000000000000000 });
+          instance.somar(valor1, valor2, { from: App.account, value: 100000000000000 });
           break;
         case 'subtrair':
-          instance.subtrair(valor1, valor2, { from: App.account, value: 1000000000000000000 });
+          instance.subtrair(valor1, valor2, { from: App.account, value: 100000000000000 });
           break;
         case 'multiplicar':
-          instance.multiplicar(valor1, valor2, { from: App.account, value: 1000000000000000000 });
+          instance.multiplicar(valor1, valor2, { from: App.account, value: 100000000000000 });
           break;
         case 'dividir':
-          instance.dividir(valor1, valor2, { from: App.account, value: 1000000000000000000 });
+          instance.dividir(valor1, valor2, { from: App.account, value: 100000000000000 });
           break;
         default:
           console.log('Opcao invalida');
